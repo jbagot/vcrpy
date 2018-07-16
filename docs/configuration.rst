@@ -28,6 +28,27 @@ Otherwise, you can override options each time you use a cassette.
 
 Note: Per-cassette overrides take precedence over the global config.
 
+Big requests
+------------
+
+If you are dealing with requests that retrieves a big chuncks of data and 
+you want to optimize the cassettes' files, you may use the binary serializer.
+
+Binary serializer make use of MessagePack format to save the requests in a binary format. 
+This serializer can be used by set the serializer option to ``bin``.
+
+.. code:: python
+
+
+    import vcr
+
+    my_vcr = vcr.VCR(
+        serializer='bin',
+        cassette_library_dir='fixtures/cassettes',
+        record_mode='once',
+        match_on=['uri', 'method'],
+    )
+
 Request matching
 ----------------
 
