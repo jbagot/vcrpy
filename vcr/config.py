@@ -8,7 +8,7 @@ import types
 import six
 
 from .cassette import Cassette
-from .serializers import yamlserializer, jsonserializer
+from .serializers import binserializer, jsonserializer, yamlserializer
 from .persisters.filesystem import FilesystemPersister
 from .util import compose, auto_decorate
 from . import matchers
@@ -44,6 +44,7 @@ class VCR(object):
         self.serializers = {
             'yaml': yamlserializer,
             'json': jsonserializer,
+            'bin': binserializer,
         }
         self.matchers = {
             'method': matchers.method,
