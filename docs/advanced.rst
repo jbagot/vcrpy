@@ -57,7 +57,7 @@ Backwards compatible properties:
 Register your own serializer
 ----------------------------
 
-Don't like JSON or YAML? That's OK, VCR.py can serialize to any format
+Don't like JSON or YAML or Binary? That's OK, VCR.py can serialize to any format
 you would like. Create your own module or class instance with 2 methods:
 
 -  ``def deserialize(cassette_string)``

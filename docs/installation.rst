@@ -21,6 +21,7 @@ The following http libraries are supported:
 -  httplib2
 -  boto
 -  Tornado's AsyncHTTPClient
+-  aiohttp
 
 Speed
 -----
